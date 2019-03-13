@@ -22,7 +22,7 @@ public class ItemGlue : Tile
     {
         
         GameObject newGel = Instantiate(GelPrefab);
-        newGel.transform.position = Vector2Int.FloorToInt(transform.position) - tileUsingUs.GetComponent<Rigidbody2D>().velocity.normalized;
+        newGel.transform.position = Vector2Int.FloorToInt(transform.position) - (tileUsingUs.GetComponent<Rigidbody2D>().velocity * 10).normalized * 1.5f;
         newGel.GetComponent<Tile>().init();
         takeDamage(this, 1);
 

@@ -44,7 +44,7 @@ public class EleanorLaser : Tile
         
         
         timer -= Time.deltaTime;
-        if (timer < 0.6)
+        if (timer < 1)
         {
             _renderer1.enabled = false;
             _renderer2.enabled = false;
